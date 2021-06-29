@@ -1,20 +1,27 @@
 Qa = 1 + 2 + 3 + 4 + 5
-print(Qa)
+#print(Qa)
 
 a = 23
 b = 19
 c = 31
 Qb = (a + b + c)/3
-print(Qb)
+#print(Qb)
 
 Qc = 403//73
-print(Qc)
+#print(Qc)
 
 Qd = 403 % 73
-print(Qd)
+#print(Qd)
 
 Qe = 2**10
-print(Qe)
+#print(Qe)
 
-Qf = 
+Qf = abs(54 - 57) 
+#print(Qf)
+
+Qg = min(34, 29, 31)
+print(Qg)
+
+
+
 
