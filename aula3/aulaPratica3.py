@@ -61,31 +61,66 @@
 # else:
 #     print("Triangulo Escaleno")
 
-print("CALCULADORA")
-print("+ Adição")
-print("- Subitração")
-print("* Multiplicação")
-print("/ Divisão")
-print("Pressione outra tecla para sair")
 
-operacao = input("Qual operação deseja fazer? ")
-if(operacao == "+" or operacao == "-" or operacao == "*" or operacao == "/"):
-    v1 = float(input("Digite o primeiro valor: "))
-    v2 = float(input("Digite o segundo valor: "))
 
-    if(operacao == "+"):   
-        v3 = v1 + v2
-        print("{} + {} = {}".format(v1, v2, v3))
-    elif(operacao == "-"):
-        v3 = v1 - v2
-        print("{} - {} = {}".format(v1, v2, v3))
-    elif(operacao == "*"):
-        v3 = v1 * v2
-        print("{} * {} = {}".format(v1, v2, v3))
-    elif(operacao == "/"):
-        v3 = v1 / v2
-        print("{} / {} = {}".format(v1, v2, v3))
-else:
-    print("Operação Cancelada.")
+# print("CALCULADORA")
+# print("+ Adição")
+# print("- Subitração")
+# print("* Multiplicação")
+# print("/ Divisão")
+# print("Pressione outra tecla para sair")
+
+# operacao = input("Qual operação deseja fazer? ")
+# if(operacao == "+" or operacao == "-" or operacao == "*" or operacao == "/"):
+#     v1 = float(input("Digite o primeiro valor: "))
+#     v2 = float(input("Digite o segundo valor: "))
+
+#     if(operacao == "+"):   
+#         v3 = v1 + v2
+#         print("{} + {} = {}".format(v1, v2, v3))
+#     elif(operacao == "-"):
+#         v3 = v1 - v2
+#         print("{} - {} = {}".format(v1, v2, v3))
+#     elif(operacao == "*"):
+#         v3 = v1 * v2
+#         print("{} * {} = {}".format(v1, v2, v3))
+#     elif(operacao == "/"):
+#         v3 = v1 / v2
+#         print("{} / {} = {}".format(v1, v2, v3))
+# else:
+#     print("Operação Cancelada.")
 
     
+print(" ")
+print("CONTA DE LUZ")
+
+print("Tipos de instalação:")
+print("R para Residência")
+print("I para Indústria")
+print("C para Comércio")
+tipo = input("Selecione o tipo de instalação: ")
+
+if(tipo == "R" or tipo == "I" or tipo == "C"):
+    energiaConsumida = float(input("Digite o consumo de energia elétrica (kWh) do estabelecimento: "))
+    if(tipo == "R"):
+        if(energiaConsumida <= 500):
+            valorAPagar = energiaConsumida*0.4
+        else:
+            valorAPagar = energiaConsumida*0.65
+    elif(tipo == "I"):
+        if(energiaConsumida <= 1000):
+            valorAPagar = energiaConsumida*0.55
+        else:
+            valorAPagar = energiaConsumida*0.6
+    elif(tipo == "C"):
+        if(energiaConsumida <= 5000):
+            valorAPagar = energiaConsumida*0.55
+        else:
+            valorAPagar = energiaConsumida*0.6
+            
+    print("Tipo de instalação: {} / Consumo em KWh: {} / Valor a ser pago: {} reais".format(tipo,energiaConsumida, valorAPagar))
+
+print("Programa finalizado")
+
+
+
