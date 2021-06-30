@@ -26,9 +26,27 @@
 # if(dano>10 and escudo == 0):
 #     print("Você está morto")
 
-norte = False
-sul = False
-leste = False
-oeste = True
-if (norte or sul or leste or oeste):
-    print("Você escapou")
+# norte = False
+# sul = False
+# leste = False
+# oeste = True
+# if (norte or sul or leste or oeste):
+#     print("Você escapou")
+
+
+# ano = int(input("Digite um ano: "))
+# if (ano%4 == 0):
+#     print("Pode ser um ano bissexto")
+# else:
+#     print("Definitivamente não é um ano bissexto")
+
+
+# cima = input("Cima: ")
+# baixo = input("Baixo: ")
+
+# if(cima and baixo):
+#     print("Decida-se!")
+# else:
+#     print("VocÊ escolheu um caminho!")
+
+
