@@ -50,13 +50,42 @@
 #     print("VocÊ escolheu um caminho!")
 
 
-lado1 = int(input("Digite o valor do lado1: "))
-lado2 = int(input("Digite o valor do lado2: "))
-lado3 = int(input("Digite o valor do lado3: "))
+# lado1 = int(input("Digite o valor do lado1: "))
+# lado2 = int(input("Digite o valor do lado2: "))
+# lado3 = int(input("Digite o valor do lado3: "))
 
-if(lado1 == lado2 and lado1 == lado3):
-    print("Triangulo equilátero")
-elif(lado1 == lado2 or lado1 == lado3 or lado2 == lado3):
-    print("Triangulo Isósceles")
+# if(lado1 == lado2 and lado1 == lado3):
+#     print("Triangulo equilátero")
+# elif(lado1 == lado2 or lado1 == lado3 or lado2 == lado3):
+#     print("Triangulo Isósceles")
+# else:
+#     print("Triangulo Escaleno")
+
+print("CALCULADORA")
+print("+ Adição")
+print("- Subitração")
+print("* Multiplicação")
+print("/ Divisão")
+print("Pressione outra tecla para sair")
+
+operacao = input("Qual operação deseja fazer? ")
+if(operacao == "+" or operacao == "-" or operacao == "*" or operacao == "/"):
+    v1 = float(input("Digite o primeiro valor: "))
+    v2 = float(input("Digite o segundo valor: "))
+
+    if(operacao == "+"):   
+        v3 = v1 + v2
+        print("{} + {} = {}".format(v1, v2, v3))
+    elif(operacao == "-"):
+        v3 = v1 - v2
+        print("{} - {} = {}".format(v1, v2, v3))
+    elif(operacao == "*"):
+        v3 = v1 * v2
+        print("{} * {} = {}".format(v1, v2, v3))
+    elif(operacao == "/"):
+        v3 = v1 / v2
+        print("{} / {} = {}".format(v1, v2, v3))
 else:
-    print("Triangulo Escaleno")
+    print("Operação Cancelada.")
+
+    
