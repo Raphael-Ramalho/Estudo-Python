@@ -98,7 +98,7 @@ print("Tipos de instalação:")
 print("R para Residência")
 print("I para Indústria")
 print("C para Comércio")
-tipo = input("Selecione o tipo de instalação: ")
+tipo = input("Selecione o tipo de instalação (R, C ou I): ")
 
 if(tipo == "R" or tipo == "I" or tipo == "C"):
     energiaConsumida = float(input("Digite o consumo de energia elétrica (kWh) do estabelecimento: "))
