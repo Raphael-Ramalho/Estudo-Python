@@ -17,13 +17,20 @@ from typing import final
 
 # media = (n1 + n2 + n3 + n4 + n5)/5
 
-x=[]
-i=0
-total = 0
-numNotas = 5
-while(i<=(numNotas-1)):
-    x.append(float(input("Nota {}: ".format(i+1))))
-    total = total + x[i]
-    i=i+1
-media = total/numNotas
-print(media)
+# x=[]
+# i=0
+# total = 0
+# numNotas = 5
+# while(i<=(numNotas-1)):
+#     x.append(float(input("Nota {}: ".format(i+1))))
+#     total = total + x[i]
+#     i=i+1
+# media = total/numNotas
+# print(media)
+
+print("Digite 'sair' para sair do programa")
+x = " "
+while(x != "sair"):
+    x = input("Digite uma palavra: ")
+    print(x)
+print("Programa finalizado!")
