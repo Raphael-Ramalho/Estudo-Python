@@ -28,9 +28,16 @@ from typing import final
 # media = total/numNotas
 # print(media)
 
-print("Digite 'sair' para sair do programa")
-x = " "
-while(x != "sair"):
-    x = input("Digite uma palavra: ")
-    print(x)
-print("Programa finalizado!")
+# print("Digite 'sair' para sair do programa")
+# x = " "
+# while(x != "sair"):
+#     x = input("Digite uma palavra: ")
+#     print(x)
+# print("Programa finalizado!")
+
+
+for i in range(1, 11, 1):
+    print("Tabuada de {}".format(i))
+    for j in range(1,11,1):
+        tabuada = i*j
+        print("{} x {} = {}".format(i, j, tabuada))
