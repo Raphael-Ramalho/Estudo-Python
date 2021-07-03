@@ -67,7 +67,7 @@ while (True):
             print("{} nota de {}".format(numNotas, nota))
         else:
             print("{} notas de {}".format(numNotas, nota))
-        if(valor == 0): continue
+        if(not valor): continue
 
     if(valor >= 20):
         nota = 20
@@ -77,7 +77,7 @@ while (True):
             print("{} nota de {}".format(numNotas, nota))
         else:
             print("{} notas de {}".format(numNotas, nota))
-        if(valor == 0): continue
+        if(not valor): continue
 
     if(valor >= 10):
         nota = 10
@@ -87,7 +87,7 @@ while (True):
             print("{} nota de {}".format(numNotas, nota))
         else:
             print("{} notas de {}".format(numNotas, nota))
-        if(valor == 0): continue
+        if(not valor): continue
 
     if(valor >= 5):
         nota = 5
@@ -97,7 +97,7 @@ while (True):
             print("{} nota de {}".format(numNotas, nota))
         else:
             print("{} notas de {}".format(numNotas, nota))
-        if(valor == 0): continue
+        if(not valor): continue
 
     if(valor >= 1):
         nota = 1
@@ -107,8 +107,8 @@ while (True):
             print("{} nota de {}".format(numNotas, nota))
         else:
             print("{} notas de {}".format(numNotas, nota))
-        if(valor == 0): continue
+        if(not valor): continue
 
     if(valor == 0):
-        print("fim do programa")
+        print("Fim do programa")
         break
