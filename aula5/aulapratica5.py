@@ -95,3 +95,4 @@ while True:
     elif op == 3:
         print("Encerrando o programa...")
         break
+
