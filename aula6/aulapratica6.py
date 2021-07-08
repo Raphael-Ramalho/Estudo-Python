@@ -48,23 +48,6 @@ def valida_int(pergunta, min, max):
         x = int(input(pergunta))
     return x
 
-def vencedor(jogador1, jogador2):
-    global empate, v1, v2
-    if (jogador1 == 1): #Pedra
-        if (jogador2 == 1): #Pedra
-            empate += 1
-        elif (jogador2 == 2): #Papel
-            v1 += 1
-        elif (jogador2 == 3): #Tesoura
-            v2 += 1
-    elif (jogador1 == 2): #Papel
-        if (jogador2 == 1): #Pedra
-            v2 += 1
-        elif (jogador2 == 2): #Papel
-            v1 += 1
-        elif (jogador2 == 3): #Tesoura
-            v2 += 1
-    elif (jogador1 == 3): #Tesoura
 
 
 #Programa principal
