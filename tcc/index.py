@@ -23,7 +23,7 @@ nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/
 # print(nf_2021[["PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)", 'PRESSÃO ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB)']][5:21:2])
 
 #Acessar linhas 
-# print(nf_2021.iloc[:4]) #do inicio até a 4
+# print(nf_2021.iloc[:4]) #do inicio até o 3.
 
 #Acessar linhas e colunas individuais
 # print(nf_2021.iloc[2,1]) #linha 2, coluna 1
@@ -42,7 +42,27 @@ nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/
 #Valores estarísticos, como numero de celulas non-NA (count), media (mean), norma (o quao espalhados estão os dados) (std), minimo (min), maximo (max).
 # print(nf_2021.describe())
 
-#Ordenação
+#Ordenação por ordem alfabetica
+# nf_2021.sort_values('Nome', ascending) #o ascending pode ser igual a true ou false para indicar se a ordenação é ascendente ou descendente
+
+# MUDANÇA NOS DADOS
+
+# criação de uma nova coluna que possue a soma de outras colunas
+# nf_2021['total'] = nf_2021['ataque'] + nf_2021['atq esp'] + nf_2021['def esp'] 
+
+# remoção de coluna
+# nf_2021 = nf_2021.drop(columns=['total'])
+
+#renomeação 
+# nf_2021.rename({'defensa':'Defesa'}, axis=1)
+
+#reordenar colunas
+# cols = list(nf_2021.columns.values)
+# nf_2021 = nf_2021
+
+#salvar em csv
+nf_2021.to_csv('modificado.csv')
+
 
 
 
