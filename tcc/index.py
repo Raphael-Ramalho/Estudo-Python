@@ -1,3 +1,5 @@
+from dataclasses import replace
+from numpy import number
 import pandas as pd #import da biblioteca pandas e substituição de seu nome por pd
 # encoder iso-8859
 
@@ -30,5 +32,11 @@ nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/
 # print(nf_2021.loc[nf_2021["PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)"] == '897,6']) #localiza na coluna 'PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)', as linhas com o valor '897,6'
 
 #Acessar linhas por nome
-for indice, linha in nf_2021.iterrows()
+#o iterrow() gera uma iteração sobre linhas
+for indice, linha in nf_2021.iterrows() : 
+  linha_ponto = linha['PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)'].replace(',','.') #replace substituindo ',' por '.'
+  print(linha_ponto)
+  if(float(linha_ponto) > 898.2) :
+    break
+
 
