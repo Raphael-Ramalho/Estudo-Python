@@ -33,10 +33,18 @@ nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/
 
 #Acessar linhas por nome
 #o iterrow() gera uma iteração sobre linhas
-for indice, linha in nf_2021.iterrows() : 
-  linha_ponto = linha['PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)'].replace(',','.') #replace substituindo ',' por '.'
-  print(linha_ponto)
-  if(float(linha_ponto) > 898.2) :
-    break
+# for indice, linha in nf_2021.iterrows() : 
+#   linha_ponto = linha['PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)'].replace(',','.') #replace substituindo ',' por '.'
+#   print(linha_ponto)
+#   if(float(linha_ponto) > 898.2) :
+#     break
+
+#Valores estarísticos, como numero de celulas non-NA (count), media (mean), norma (o quao espalhados estão os dados) (std), minimo (min), maximo (max).
+# print(nf_2021.describe())
+
+#Ordenação
+
+
+
 
 
