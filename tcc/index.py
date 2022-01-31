@@ -4,7 +4,9 @@ import pandas as pd #import da biblioteca pandas e substituição de seu nome po
 # encoder iso-8859
 
 
-nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/novaFriburgo_2021.csv',sep=';',header=8,encoding='iso8859-15') #essa linha serve para ler o arquivo alvo csv. O primeiro parametro é o caminho do arquivo e o segundo é o separador. O terceiro indica qual é a linha que contém o nome das colunas, enquanto o quarto mostra qual encoding será usado para ler os caracteres do documento. o metodo .read_ pode ser combinado com outros tipos de arquico como json, excel, entre outros. para visualizar os disponíveis, digite .read_ e espere o a IDE sugerir possiveis complementos.
+# nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/novaFriburgo_2021.csv',sep=';',header=8,encoding='iso8859-15') #essa linha serve para ler o arquivo alvo csv. O primeiro parametro é o caminho do arquivo e o segundo é o separador. O terceiro indica qual é a linha que contém o nome das colunas, enquanto o quarto mostra qual encoding será usado para ler os caracteres do documento. o metodo .read_ pode ser combinado com outros tipos de arquico como json, excel, entre outros. para visualizar os disponíveis, digite .read_ e espere o a IDE sugerir possiveis complementos.
+
+db = pd.read_csv('https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv')
 
 
 # print(nf_2021.columns) # exibe as colunas
@@ -61,10 +63,25 @@ nf_2021 = pd.read_csv('D:/Repositorios_github/Estudo-Python/tcc/banco_de _dados/
 # nf_2021 = nf_2021
 
 #salvar em csv
-nf_2021.to_csv('modificado.csv')
+# nf_2021.to_csv('modificado.csv')
 
 
+#filtragem de dados
+# novo_db = db.loc[(db['Type 1'] == 'Fire')] # criou uma nova tabela apenas com os pokemons de fogo
+# novo_db = db.loc[(db['Type 1'] == 'Fire') & (db['Type 2'] == 'Water')] # criou uma nova tabela apenas com os pokemons de fogo E agua
+# novo_db = db.loc[(db['Type 1'] == 'Fire') | (db['Type 2'] == 'Water')] # criou uma nova tabela apenas com os pokemons de fogo OU agua
+# novo_db.reset_index(drop=True, inplace=True) # o reset_index reseta o index da tabela, o drop=True deleta o index antigo e o inplace=True fala que o a edição será feita sobre o bando de dados antigo, e n sobre uma cópia dele.
+# print(novo_db)
 
+#filtrando versões que possuem mega
+# novo_db = db.loc[db['Name'].str.contains('Mega ')] #o metodo .str.contains procura por ocorrências de determinada sub string em uma string maior
+# print(novo_db)
 
+# filtrando versões que não possuem mega
+# novo_db = db.loc[~db['Name'].str.contains('Mega ')] #o metodo .str.contains procura por ocorrências de determinada sub string em uma string maior
+# print(novo_db)
 
+#expressão para pokemons de agua ou fogo
+import re #importação de expressão regulares
+db.loc[db['Type 1'].str.contains('Fogo|Agua'), flags=re.I, regex=True]
 
