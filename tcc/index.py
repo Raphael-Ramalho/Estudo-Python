@@ -1,4 +1,5 @@
 from dataclasses import replace
+from sys import flags
 from numpy import number
 import pandas as pd #import da biblioteca pandas e substituição de seu nome por pd
 # encoder iso-8859
@@ -83,5 +84,13 @@ db = pd.read_csv('https://gist.githubusercontent.com/armgilles/194bcff35001e7eb5
 
 #expressão para pokemons de agua ou fogo
 import re #importação de expressão regulares
-db.loc[db['Type 1'].str.contains('Fogo|Agua'), flags=re.I, regex=True]
+# novo_db = db.loc[db['Type 1'].str.contains('Fire|Water', flags=re.I, regex=True)] #serve para ignorar upp and lower cases
+
+#pokemons que começam com pi
+novo_db = db.loc[db['Name'].str.contains('^pi', flags=re.I, regex=True)] #serve para ignorar upp and lower cases
+
+#mudanças condicionais
+# db.loc[db['Type 1'] == 'Fire', 'Type 1'] = 'Fogueteiro'
+db.loc[db['HP'] > 500, 'Lendario'] = True
+print(db)
 
